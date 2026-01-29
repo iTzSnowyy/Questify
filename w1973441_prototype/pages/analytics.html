@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Questify - Analytics</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo" style="display:flex;align-items:center;gap:8px;">
+      <img src="../assets/logo.png" alt="Questify Logo" style="height:48px;">
+      <span>Questify</span>
+    </div>
+    <div id="user-info">
+      <span id="user-email"></span>
+      <button id="logout-btn" class="btn small">Logout</button>
+    </div>
+  </header>
+
+  <nav class="nav">
+    <a href="index.html">Auth</a>
+    <a href="home.html">Home</a>
+    <a href="character.html">Character</a>
+    <a href="shop.html">Shop</a>
+    <a href="bosses.html">Bosses</a>
+    <a href="analytics.html">Analytics</a>
+  </nav>
+
+  <main>
+    <h2>Analytics & Insights</h2>
+
+    <div class="card">
+      <h3>Last 7 Days</h3>
+      <p><strong>Average Mood:</strong> <span id="avg-mood">N/A</span></p>
+      <p><strong>Average Energy:</strong> <span id="avg-energy">N/A</span></p>
+      <p><strong>Total Completions:</strong> <span id="total-completions">0</span></p>
+      <p><strong>Most Completed Habit:</strong> <span id="top-habit">N/A</span></p>
+    </div>
+
+    <div class="card">
+      <h3>Coach Insight</h3>
+      <p id="coach-message">Collecting data...</p>
+    </div>
+  </main>
+
+  <script type="module" src="../js/firebase-config.js"></script>
+  <script type="module" src="../js/ui.js"></script>
+  <script type="module" src="../js/analytics.js"></script>
+</body>
+</html>
