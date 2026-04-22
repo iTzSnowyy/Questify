@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Questify - Create Your Character</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo logo-flex">
+      <img src="assets/logo.png" alt="Questify Logo" class="logo-img">
+      <span>Questify</span>
+    </div>
+  </header>
+
+  <div class="setup-wrapper">
+    <h2 class="setup-title">Create Your Character</h2>
+    <p class="setup-subtitle">Pick a username and choose your hero avatar before your quest begins.</p>
+
+    <!-- Username -->
+    <div class="card">
+      <p class="section-label">Username</p>
+      <input id="username-input" type="text" placeholder="Enter your username..." class="full-width" maxlength="24">
+    </div>
+
+    <!-- Avatar Carousel -->
+    <div class="card">
+      <p class="section-label">Choose Avatar</p>
+      <div class="carousel-wrapper">
+        <button class="arrow-btn" id="prev-btn" aria-label="Previous avatar">&#8592;</button>
+        <div>
+          <div class="avatar-frame" id="avatar-frame">
+            <img id="avatar-img" src="" alt="Character avatar" onerror="this.style.display='none'; document.getElementById('avatar-svg-fallback').style.display='block';">
+            <svg id="avatar-svg-fallback" class="hidden" width="110" height="110" viewBox="0 0 110 110"></svg>
+          </div>
+          <div class="avatar-dots" id="dots"></div>
+          <div class="avatar-meta">
+            <div class="avatar-name" id="avatar-name"></div>
+            <div class="avatar-class" id="avatar-class"></div>
+            <div class="stat-pills" id="stat-pills"></div>
+          </div>
+        </div>
+        <button class="arrow-btn" id="next-btn" aria-label="Next avatar">&#8594;</button>
+      </div>
+    </div>
+
+    <button id="confirm-btn" class="btn">Begin Your Quest &#8594;</button>
+    <p id="setup-error" class="error"></p>
+  </div>
+
+  <script type="module" src="js/character-setup.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Questify - Workouts</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo logo-flex">
+      <img src="assets/logo.png" alt="Questify Logo" class="logo-img">
+      <span>Questify</span>
+    </div>
+    <div id="user-info">
+      <span id="user-email"></span>
+      <button id="logout-btn" class="btn small">Logout</button>
+    </div>
+  </header>
+
+  <nav class="nav">
+    <a href="index.html">Auth</a>
+    <a href="home.html">Home</a>
+    <a href="character.html">Character</a>
+    <a href="shop.html">Shop</a>
+    <a href="workouts.html">Workouts</a>
+    <a href="bosses.html">Bosses</a>
+    <a href="analytics.html">Analytics</a>
+  </nav>
+
+  <main>
+    <div class="page-header-row">
+      <div>
+        <h2>Workouts</h2>
+        <p class="page-subtitle">Create routines, add exercises, and earn XP + coins when workouts are completed.</p>
+      </div>
+      <button id="add-workout-btn" class="btn primary">+ Add Workout</button>
+    </div>
+
+    <div class="card workout-create-card">
+      <div class="workout-card-header">
+        <div>
+          <h3>New workout</h3>
+          <p>Give your workout a name and choose difficulty to set rewards.</p>
+        </div>
+      </div>
+
+      <div class="workout-form-grid">
+        <input id="workout-title" type="text" placeholder="Workout name">
+        <select id="workout-difficulty">
+          <option value="easy">Easy</option>
+          <option value="medium" selected>Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+      </div>
+      <p id="workout-error" class="error"></p>
+    </div>
+
+    <div id="workout-list" class="workout-list"></div>
+  </main>
+
+  <script type="module" src="js/ui.js"></script>
+  <script type="module" src="js/rewards.js"></script>
+  <script type="module" src="js/workouts.js"></script>
+</body>
+</html>

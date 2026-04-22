@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Questify - Home</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo logo-flex">
+      <img src="assets/logo.png" alt="Questify Logo" class="logo-img">
+      <span>Questify</span>
+    </div>
+    <div id="user-info">
+      <span id="user-email"></span>
+      <button id="logout-btn" class="btn small">Logout</button>
+    </div>
+  </header>
+
+  <nav class="nav">
+    <a href="index.html">Auth</a>
+    <a href="home.html">Home</a>
+    <a href="character.html">Character</a>
+    <a href="shop.html">Shop</a>
+    <a href="workouts.html">Workouts</a>
+    <a href="bosses.html">Bosses</a>
+    <a href="analytics.html">Analytics</a>
+  </nav>
+
+  <main>
+    <h2>Your Habits & To-Do List</h2>
+
+    <div class="card">
+      <h3>Add New Habit</h3>
+      <input id="habit-name" type="text" placeholder="Habit name">
+      <input id="habit-category" type="text" placeholder="Category (e.g. Health)">
+      <select id="habit-frequency">
+        <option value="daily">Daily</option>
+        <option value="weekly">Weekly</option>
+      </select>
+      <select id="habit-difficulty">
+        <option value="easy">Easy (+10 XP, +2 coins)</option>
+        <option value="medium">Medium (+20 XP, +5 coins)</option>
+        <option value="hard">Hard (+40 XP, +10 coins)</option>
+      </select>
+      <button id="add-habit-btn" class="btn">Add Habit</button>
+      <p id="habit-error" class="error"></p>
+    </div>
+
+    <div class="card">
+      <h3>Habits</h3>
+      <ul id="habit-list"></ul>
+    </div>
+  </main>
+
+  <script type="module" src="js/ui.js"></script>
+  <script type="module" src="js/rewards.js"></script>
+  <script type="module" src="js/habits.js"></script>
+</body>
+</html>

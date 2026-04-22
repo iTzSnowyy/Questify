@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Questify - Shop</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo logo-flex">
+      <img src="assets/logo.png" alt="Questify Logo" class="logo-img">
+      <span>Questify</span>
+    </div>
+    <div id="user-info">
+      <span id="user-email"></span>
+      <button id="logout-btn" class="btn small">Logout</button>
+    </div>
+  </header>
+
+  <nav class="nav">
+    <a href="index.html">Auth</a>
+    <a href="home.html">Home</a>
+    <a href="character.html">Character</a>
+    <a href="shop.html">Shop</a>
+    <a href="workouts.html">Workouts</a>
+    <a href="bosses.html">Bosses</a>
+    <a href="analytics.html">Analytics</a>
+  </nav>
+
+  <main>
+    <h2>Item Shop</h2>
+
+    <div class="card">
+      <p>Coins: <span id="coins">0</span></p>
+    </div>
+
+    <div id="shop-items" class="shop-grid"></div>
+
+    <div id="shop-message" class="error"></div>
+  </main>
+
+  <script type="module" src="js/ui.js"></script>
+  <script type="module" src="js/shop.js"></script>
+</body>
+</html>

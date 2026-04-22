@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Questify - Character</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo logo-flex">
+      <img src="assets/logo.png" alt="Questify Logo" class="logo-img">
+      <span>Questify</span>
+    </div>
+    <div id="user-info">
+      <span id="user-email"></span>
+      <button id="logout-btn" class="btn small">Logout</button>
+    </div>
+  </header>
+
+  <nav class="nav">
+    <a href="index.html">Auth</a>
+    <a href="home.html">Home</a>
+    <a href="character.html">Character</a>
+    <a href="shop.html">Shop</a>
+    <a href="workouts.html">Workouts</a>
+    <a href="bosses.html">Bosses</a>
+    <a href="analytics.html">Analytics</a>
+  </nav>
+
+  <main>
+    <div class="card text-center"> 
+        <img id="character-avatar" src="assets/shadow_knight.png" 
+        alt="Character Avatar" 
+        class="character-avatar"> 
+    </div>
+    <h2>Character</h2>
+
+    <div class="card">
+      <p><strong>Level:</strong> <span id="char-level">1</span></p>
+      <p><strong>XP:</strong> <span id="char-xp">0</span> / <span id="char-xp-max">100</span></p>
+      <div class="xp-bar-bg">
+        <div id="xp-bar"></div>
+      </div>
+      <p><strong>Coins:</strong> <span id="char-coins">0</span></p>
+    </div>
+
+    <div class="card">
+      <h3>Character Sheet</h3>
+      <p>Unspent Points: <span id="char-points">0</span></p>
+      <p>Strength: <span id="char-str">5</span> <span id="char-str-equipment" class="stat-bonus">(<span id="char-str-bonus">0</span>)</span> <button id="str-plus" class="btn small">+</button></p>
+      <p>Dexterity: <span id="char-dex">5</span> <span id="char-dex-equipment" class="stat-bonus">(<span id="char-dex-bonus">0</span>)</span> <button id="dex-plus" class="btn small">+</button></p>
+      <p>Intelligence: <span id="char-int">5</span> <span id="char-int-equipment" class="stat-bonus">(<span id="char-int-bonus">0</span>)</span> <button id="int-plus" class="btn small">+</button></p>
+    </div>
+
+    <div class="card">
+      <h3>Equipment</h3>
+      <p id="equipment-list">No items equipped</p>
+    </div>
+  </main>
+
+  <script type="module" src="js/ui.js"></script>
+  <script type="module" src="js/rewards.js"></script>
+  <script type="module" src="js/character.js"></script>
+</body>
+</html>

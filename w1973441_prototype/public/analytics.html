@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Questify - Analytics</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo logo-flex">
+      <img src="assets/logo.png" alt="Questify Logo" class="logo-img">
+      <span>Questify</span>
+    </div>
+    <div id="user-info">
+      <span id="user-email"></span>
+      <button id="logout-btn" class="btn small">Logout</button>
+    </div>
+  </header>
+
+  <nav class="nav">
+    <a href="index.html">Auth</a>
+    <a href="home.html">Home</a>
+    <a href="character.html">Character</a>
+    <a href="shop.html">Shop</a>
+    <a href="workouts.html">Workouts</a>
+    <a href="bosses.html">Bosses</a>
+    <a href="analytics.html">Analytics</a>
+  </nav>
+
+  <main>
+    <h2>Analytics & Insights</h2>
+
+    <div class="analytics-stats-grid">
+      <div class="card coach-card">
+        <h3>Coach Insight</h3>
+        <p id="coach-message">Collecting data...</p>
+      </div>
+
+      <div class="card stats-card">
+        <h3>Quick Stats</h3>
+        <div class="stat-row">
+          <span>Total Habits Completed</span>
+          <strong id="habits-completed">0</strong>
+        </div>
+        <div class="stat-row">
+          <span>Streak Tracking</span>
+          <strong id="streak-tracking">0 days</strong>
+        </div>
+        <div class="stat-row last-row">
+          <span>Workouts Completed</span>
+          <strong id="workouts-completed">0</strong>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Habit Completion Trend</h3>
+      <div id="habit-chart" class="habit-chart"></div>
+      <div id="chart-legend" class="chart-legend"></div>
+    </div>
+
+  </main>
+
+  <script type="module" src="js/ui.js"></script>
+  <script type="module" src="js/analytics.js"></script>
+</body>
+</html>
